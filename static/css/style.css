@@ -40,7 +40,11 @@
 
 	body
 	{
-		background: #f5f7fa;
+        height:100vh;
+        background: #f5f7fa;
+        background: -webkit-radial-gradient(#fff, #f5f7fa);
+        background:    -moz-radial-gradient(#fff, #f5f7fa);
+        background:         radial-gradient(#fff, #f5f7fa);
 	}
 
 		body.is-loading *
@@ -1108,6 +1112,7 @@
 }
 
 .row {
+    padding-left: 0px !important;
     margin-top:.5em;
     text-align: center;
     margin-left: auto !important;
@@ -1203,6 +1208,9 @@ h3 {
 }
 
 #header-wrapper {
+    max-width: 1080px;
+    margin-left:auto;
+    margin-right:auto;
     text-align: center;
     padding: 4em 5em;
 }
@@ -1222,10 +1230,12 @@ input {
 input[type="image"] {
     width:100%;
     padding:0em;
-    border-radius:2.5em;
+    border-radius:25%;
     -webkit-box-shadow: 0px 5px 6px 0px #777;  
     -moz-box-shadow:    0px 5px 6px 0px #777;  /* Firefox 3.5 - 3.6 */
     box-shadow:         0px 5px 10px 0px #999;
+    background-repeat: no-repeat;
+
 }
 
 

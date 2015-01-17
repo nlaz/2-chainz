@@ -23,20 +23,20 @@
 		<!-- Header -->
         <div id="header-wrapper">
 				<!-- Hero -->
-             <button id="generate-button">Generate</button>
+             <input id="generate-button" type="submit" value="Generate"/>
                 <h2 id="select-prompt">Select Two</h2>
             <div class="row 12u">
 				<div class="image-wrapper 3u">
-                    <input type="image"  src="{{ url_for('static', filename='images/seuss.jpg') }}" />
+                    <input type="image" name="swagger"  src="{{ url_for('static', filename='images/seuss.jpg') }}" />
                 </div>
                <div class="image-wrapper 3u">
-                    <input type="image"  src="{{ url_for('static', filename='images/ernest.jpg') }}" />
+                    <input type="image"  name="swagger" src="{{ url_for('static', filename='images/ernest.jpg') }}" />
                 </div>
                <div class="image-wrapper 3u">
-                    <input type="image"  src="{{ url_for('static', filename='images/jay-z.jpg') }}" />
+                    <input type="image"  name="swagger" src="{{ url_for('static', filename='images/jay-z.jpg') }}" />
                 </div>
                 <div class="image-wrapper 3u">
-                    <input type="image"  src="{{ url_for('static', filename='images/gambino.jpg') }}" />
+                    <input type="image"  name="swagger" src="{{ url_for('static', filename='images/gambino.jpg') }}" />
                 </div>
             </div>
         </div>
