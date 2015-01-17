@@ -1,9 +1,21 @@
 from __future__ import print_function
+from flask import Flask, render_template, request
 import random
+import os
+
+app = Flask(__name__)
+app.config["DEBUG"] = True  
 
 dict = {}
+
+
+@app.route("/")
+def site():
+	return render_template("index.html")
+
+
 def readInFile(file):
-	input_file = open(file, 'r')
+	input_file = open("lyrics/" + file, 'r')
 	words = input_file.read().rsplit() #note that split without arguments splits on whitespace
 	for i in range(len(words)-1):
 		pair = words[i]+' '+words[i+1]
@@ -33,22 +45,46 @@ def printNumLine(numLines):
 				count = 0
 				print()
 		lineCount += 1
-		print()
 
 def loadSeuss():
 	readInFile('fox-in-socks.txt')
 	readInFile('cat-in-the-hat.txt')
 	readInFile('green-eggs-and-ham.txt')
 	readInFile('one-fish-two-fish.txt')
+	readInFile('mullberry-street.txt')
 
 def loadGambino():
 	readInFile('freaks-and-geeks.txt')
 	readInFile('bonfire.txt')
 
-loadSeuss()
-loadGambino()
+def loadHemingway():
+	readInFile('advice-to-son.txt')
+	readInFile('i-like-canadians.txt')
 
-printNumLine(5)
+def loadJayZ():
+	readInFile('empire-state-of-mind.txt')
+	readInFile('holy-grail.txt')
+
+def load2Chainz():
+	readInFile('we-own-it.txt')
+	readInFile('birthday-song.txt')
+	readInFile('im-different.txt')
+	readInFile('bandz-dance.txt')
+
+# loadSeuss()
+# # loadGambino()
+# # loadHemingway()
+# # loadJayZ()
+# # load2Chainz()
+# readInFile('eminem.txt')
+
+# printNumLine(2)
+# printNumLine(3)
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    # app.run(host='0.0.0.0', port=port)
+    app.run()
 
 
 

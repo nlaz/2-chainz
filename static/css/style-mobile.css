@@ -1,0 +1,163 @@
+/*
+	Telephasic by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body,input,textarea,select
+	{
+		font-size: 12pt;
+		letter-spacing: 0;
+	}
+
+	h2
+	{
+		font-size: 1.5em;
+		line-height: 1.25em;
+	}
+
+	/* Sections/Article */
+
+		header
+		{
+			margin-bottom: 1em;
+		}
+
+			header > p
+			{
+				font-size: 1em;
+			}
+
+	/* List */
+	
+		ul
+		{
+		}
+
+			ul.divided
+			{
+			}
+
+				ul.divided li
+				{
+					padding-top: 0.75em;
+					margin-top: 0.75em;
+				}
+
+/*********************************************************************************/
+/* Wrappers                                                                      */
+/*********************************************************************************/
+
+	.wrapper
+	{
+		padding: 3em 20px 3em 20px;
+	}
+
+	#header-wrapper
+
+	
+		.homepage #header-wrapper
+
+	
+	#promo-wrapper
+	{
+		padding: 20px;
+	}
+
+	
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#logo
+	{
+		position: relative;
+	}
+	
+		#logo a
+		{
+			border: solid 1px rgba(255,255,255,0.75);
+			border-radius: 0.35em;
+			height: 3em;
+			line-height: 3em;
+		}
+
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+
+	#nav
+	{
+		display: none;
+	}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+	}
+
+		#footer ul.divided
+		{
+			margin: 0;
+		}
+
+			#footer ul.divided li:first-child
+			{
+				border-top: solid 1px #d2d7dc;
+				padding-top: 0.75em;
+				margin-top: 0.75em;
+			}
+
+			#footer ul.divided:first-child li:first-child
+			{
+				border-top: 0;
+				padding-top: 0;
+				margin-top: 0;
+			}
+			
+/*********************************************************************************/
+/* Hero                                                                          */
+/*********************************************************************************/
+
+	#hero
+	{
+         width:100%;
+	}
+
+		#hero header
+		{
+/*			margin: 0 0 1.25em 0;*/
+		}
+		
+			#hero header h2
+			{
+				font-size: 1.5em;
+			}
+			
+		#hero p
+		{
+			font-size: 1em;
+		}
+		
+
+
+
+
+.sponsor-contact {
+    font-size: .8em;
+}
+
+
+
+
+
+
+
+
