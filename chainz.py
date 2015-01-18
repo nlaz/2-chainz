@@ -20,6 +20,7 @@ def site():
 
 @app.route('/swagger')
 def swagger():
+	global dict
 	dict = {}
 	p1 = request.args.get('p1')
 	p2 = request.args.get('p2')
@@ -126,8 +127,8 @@ def loadSelectors(p1, p2):
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
-    # app.run()
+    # app.run(host='0.0.0.0', port=port)
+    app.run()
 
 
 
