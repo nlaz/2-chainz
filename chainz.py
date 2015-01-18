@@ -85,20 +85,25 @@ def load2Chainz():
 	readInFile('im-different.txt')
 	readInFile('bandz-dance.txt')
 
+def loadBey():
+	readInFile('single-ladies.txt')
+	readInFile('seven-eleven.txt')
+	readInFile('drunk-in-love.txt')
+	readInFile('flawless.txt')
+
 def loadSelectors(p1, p2):
-	print("HERE "+ p1 + " " + p2 )
 	if (p1 == "seuss") or (p2 == "seuss"):
-		print("SEUSS")
 		loadSeuss()
 	if (p1 == "jay-z") or (p2 == "jay-z"):
-		print("JAYZ")
 		loadJayZ()
 	if (p1 == "ernest") or (p2 == "ernest"):
-		print("ERNEST")
 		loadHemingway()
 	if (p1 == "gambino") or (p2 == "gambino"):
-		print("GAMBINO")
 		loadGambino() 
+	if (p1 == "beyonce") or (p2 == "beyonce"):
+		loadBey()
+	if (p1 == "2chainz") or (p2 == "2chainz"):
+		load2Chainz()
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))

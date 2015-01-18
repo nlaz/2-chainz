@@ -31,13 +31,12 @@
                 <p id="quote"></p>
                 <h2 id="prompt">Mashup your favorite artists. Try it now. </h2>
             </div>
-            <!-- <form action="/swag" method="post"> -->
             	<input id="generate-button" type="submit" name="generate" value="Generate"/>
          	
                 <h2 id="select-prompt">Select Two</h2>
             <div class="row 12u">
 				<div class="image-wrapper 3u">
-                    <input id="seuss" type="image" class="image-button selected1" name="suess" value="selected" src="{{ url_for('static', filename='images/seuss.jpg') }}" />
+                    <input id="seuss" type="image" class="image-button selected1" name="suess" src="{{ url_for('static', filename='images/seuss.jpg') }}" />
                 </div>
                <div class="image-wrapper 3u">
                     <input id="ernest" type="image"  class="image-button" name="ernest" src="{{ url_for('static', filename='images/ernest.jpg') }}" />
@@ -49,7 +48,20 @@
                     <input id="gambino" type="image"  class="image-button" name="gambino" src="{{ url_for('static', filename='images/gambino.jpg') }}" />
                 </div>
             </div>
-        <!-- </form> -->
+            <div class="row 12u">
+				<div class="image-wrapper 3u">
+                    <input id="beyonce" type="image" class="image-button" name="beyonce" src="{{ url_for('static', filename='images/beyonce.jpg') }}" />
+                </div>
+               <div class="image-wrapper 3u">
+                    <input id="2chainz" type="image"  class="image-button" name="2chainz" src="{{ url_for('static', filename='images/2-chainz.jpg') }}" />
+                </div>
+               <div class="image-wrapper 3u">
+                    <input id="jay-z" type="image"  class="image-button selected2" name="jay-z" src="{{ url_for('static', filename='images/jay-z.jpg') }}" />
+                </div>
+                <div class="image-wrapper 3u">
+                    <input id="gambino" type="image"  class="image-button" name="gambino" src="{{ url_for('static', filename='images/gambino.jpg') }}" />
+                </div>
+            </div>
         </div>
 	</body>
 </html>
