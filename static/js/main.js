@@ -1,6 +1,9 @@
 $(document).ready(function() {
-   initClicks(); 
+    $("#quote").hide();
+    initClicks(); 
 });
+
+selectPos = 1;
 
 function initClicks() {
 
@@ -26,5 +29,35 @@ function initClicks() {
         $('html, body').animate({
             scrollTop: $(".contact").offset().top - 100
         }, 500);
+    });
+    
+    $(".image-button").click(function() {
+        console.log("CLICK");
+        if (selectPos === 1){
+            $(".selected1").toggleClass("selected1");
+            $(this).addClass("selected1");
+            selectPos = 2;
+        } else if (selectPos === 2){
+            $(".selected2").toggleClass("selected2");
+            $(this).addClass("selected2");
+            selectPos = 1;
+        }
+    });
+
+       $("#generate-button").click(function() {
+        console.log("CLICK");
+         var selected1 = $(".selected1").attr('id');
+         var selected2 = $(".selected2").attr('id');
+         $.get($SCRIPT_ROOT + "/swagger", {
+             p1: this.selected1,
+             p2: this.selected2
+         }, function(data){
+            console.log(data);
+            $("#prompt").hide();
+            $("#quote").show();  
+            $("#quote").html(data);
+//            Results
+         });
+        return false;               
     });
 }
