@@ -66,6 +66,7 @@ def loadSeuss():
 	readInFile('green-eggs-and-ham.txt')
 	readInFile('one-fish-two-fish.txt')
 	readInFile('mullberry-street.txt')
+	readInFile('if-i-ran-a-zoo.txt')
 
 def loadGambino():
 	readInFile('freaks-and-geeks.txt')
