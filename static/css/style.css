@@ -50,7 +50,7 @@
 
 	body
 	{
-        height:100vh;
+        height:100%;
         background: #f5f7fa;
         background: -webkit-radial-gradient(#fff, #f5f7fa);
         background:    -moz-radial-gradient(#fff, #f5f7fa);
