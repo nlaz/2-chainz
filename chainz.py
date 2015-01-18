@@ -72,8 +72,10 @@ def loadGambino():
 	readInFile('bonfire.txt')
 
 def loadHemingway():
+	readInFile('captives.txt')
 	readInFile('advice-to-son.txt')
 	readInFile('i-like-canadians.txt')
+	readInFile('youth.txt')
 
 def loadJayZ():
 	readInFile('empire-state-of-mind.txt')
@@ -91,6 +93,17 @@ def loadBey():
 	readInFile('drunk-in-love.txt')
 	readInFile('flawless.txt')
 
+def loadPoe():
+	readInFile('a-dream.txt')
+	readInFile('alone.txt')
+	readInFile('evening-star.txt')
+	readInFile('a-valentine.txt')
+
+def loadShakespeare():
+	readInFile('the-world-stage.txt')
+	readInFile('lover-complaint.txt')
+	readInFile('winter-wind.txt')
+
 def loadSelectors(p1, p2):
 	if (p1 == "seuss") or (p2 == "seuss"):
 		loadSeuss()
@@ -104,6 +117,11 @@ def loadSelectors(p1, p2):
 		loadBey()
 	if (p1 == "2chainz") or (p2 == "2chainz"):
 		load2Chainz()
+	if (p1 == "poe") or (p2 == "poe"):
+		loadPoe()
+	if (p1 == "shakespeare") or (p2 == "shakespeare"):
+		loadShakespeare()
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
