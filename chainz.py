@@ -18,29 +18,15 @@ def site():
 	else: # request.method == "GET"
 		return render_template("index.html")
 
-@app.route("/swag", methods=["POST"])	
-def generate():
-	# print(request.form["seuss"])
-	loadSeuss()
-	load2Chainz()
-	text = getNumLines(2) + getNumLines(3)
-	return render_template("index.html", quote=text)	
-
 @app.route('/swagger')
 def swagger():
 	p1 = request.args.get('p1')
 	p2 = request.args.get('p2')
-	# print(p1 + " " + p2)
-	loadSeuss()
-	load2Chainz()
+	loadSelectors(p1, p2)
 	text = getNumLines(2) + getNumLines(3)
 	print(text)
 	return text
 
-@app.route("/artist", methods=["POST"])
-def artist(num=0):
-	print(request.body)
-	return render_template("index.html")
 
 def readInFile(filename, charset='utf-8'):
 	with open("lyrics/" + filename, 'r') as f:
@@ -100,15 +86,20 @@ def load2Chainz():
 	readInFile('im-different.txt')
 	readInFile('bandz-dance.txt')
 
-# loadSeuss()
-# # loadGambino()
-# # loadHemingway()
-# # loadJayZ()
-# # load2Chainz()
-# readInFile('eminem.txt')
-
-# printNumLine(2)
-# printNumLine(3)
+def loadSelectors(p1, p2):
+	print("HERE "+ p1 + " " + p2 )
+	if (p1 == "seuss") or (p2 == "seuss"):
+		print("SEUSS")
+		loadSeuss()
+	if (p1 == "jay-z") or (p2 == "jay-z"):
+		print("JAYZ")
+		loadJayZ()
+	if (p1 == "ernest") or (p2 == "ernest"):
+		print("ERNEST")
+		loadHemingway()
+	if (p1 == "gambino") or (p2 == "gambino"):
+		print("GAMBINO")
+		loadGambino() 
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
