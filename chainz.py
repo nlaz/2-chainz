@@ -20,6 +20,7 @@ def site():
 
 @app.route('/swagger')
 def swagger():
+	dict = {}
 	p1 = request.args.get('p1')
 	p2 = request.args.get('p2')
 	loadSelectors(p1, p2)
@@ -45,12 +46,10 @@ def getNumLines(numLines):
 	while lineCount < numLines:
 		current_pair = random.choice(dict.keys())
 		result = current_pair.capitalize()
-		# print(current_pair.capitalize())
 		count = 0
 		while current_pair in dict and lineCount < numLines:
 			next_word = random.choice(dict[current_pair])
 			result = result+ ' '+ next_word
-			# print('['+ current_pair +'] ->'+ next_word)
 			comp = current_pair.split()
 			current_pair = comp[1]+ ' '+ next_word
 			count += 1
@@ -103,8 +102,8 @@ def loadSelectors(p1, p2):
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    # app.run(host='0.0.0.0', port=port)
-    app.run()
+    app.run(host='0.0.0.0', port=port)
+    # app.run()
 
 
 
