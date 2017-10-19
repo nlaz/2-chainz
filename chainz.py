@@ -5,16 +5,13 @@ import random
 import os
 
 app = Flask(__name__)
-app.config["DEBUG"] = True  
+app.config["DEBUG"] = True
 
 dict = {}
 
-
 @app.route("/", methods=["GET", "POST"])
 def site():
-	print("TEST")
 	if request.method == "POST":
-		print("GENERATE YO!")
 		return render_template("index.html")
 	else: # request.method == "GET"
 		return render_template("index.html")
@@ -36,9 +33,9 @@ def readInFile(filename, charset='utf-8'):
 		words = f.read().decode(charset).rsplit()
 		for i in range(len(words)-1):
 			pair = words[i]+' '+words[i+1]
-			if i < len(words)-2: 
+			if i < len(words)-2:
 				value = words[i+2]
-				if pair not in dict: 
+				if pair not in dict:
 					dict[pair] = [value]
 				else:
 					dict[pair].append(value)
@@ -115,7 +112,7 @@ def loadSelectors(p1, p2):
 	if (p1 == "ernest") or (p2 == "ernest"):
 		loadHemingway()
 	if (p1 == "gambino") or (p2 == "gambino"):
-		loadGambino() 
+		loadGambino()
 	if (p1 == "beyonce") or (p2 == "beyonce"):
 		loadBey()
 	if (p1 == "2chainz") or (p2 == "2chainz"):

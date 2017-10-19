@@ -1,67 +1,64 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Jux Box 2000</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="{{ url_for('static', filename='js/jquery.min.js') }}" ></script>
-		<script src="{{ url_for('static', filename='js/jquery.dropotron.min.js') }}"></script>
-		<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
-		<script src="{{ url_for('static', filename='js/skel-layers.min.js') }}" ></script>
-		<script src="{{ url_for('static', filename='js/init.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-		<script type=text/javascript>
-			$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
-		</script>
-		<noscript>
+<head>
+	<title>Jux Box</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=PT+Mono|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/skel.css') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}" ></script>
+	<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/skel-layers.min.js') }}" ></script>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	<script type=text/javascript>
+	$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+	</script>
+</head>
+<body class="homepage">
+	<!-- Header -->
+	<div id="nav-header">
+		<div id='nav-container'>
+			<h1>Jux Box</h1>
+		</div>
+	</div>
+	<div id="header-wrapper">
+		<!-- Hero -->
+		<h1>Jux Box</h1>
+		<div id="quote-wrapper">
+			<p id="quote"></p>
+			<h2 id="prompt">Mashup your favorite artists. Try it now. </h2>
+		</div>
+		<input id="generate-button" type="submit" name="generate" value="Generate"/>
 
-            <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
-			<link rel="stylesheet" href="{{ url_for('static', filename='css/skel.css') }}"/>
-			<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
-		</noscript>
-	</head>
-	<body class="homepage">
-		<!-- Header -->
-        <div id="header-wrapper">
-				<!-- Hero -->
-				<h1>Jux Box</h1>
-            <div id="quote-wrapper">
-                <p id="quote"></p>
-                <h2 id="prompt">Mashup your favorite artists. Try it now. </h2>
-            </div>
-            	<input id="generate-button" type="submit" name="generate" value="Generate"/>
-         	
-                <h2 id="select-prompt">Select Two</h2>
-            <div class="row 12u">
-				<div class="image-wrapper 3u">
-                    <input id="seuss" type="image" class="image-button selected1" name="suess" src="{{ url_for('static', filename='images/seuss.jpg') }}" />
-                </div>
-               <div class="image-wrapper 3u">
-                    <input id="ernest" type="image"  class="image-button" name="ernest" src="{{ url_for('static', filename='images/ernest.jpg') }}" />
-                </div>
-               <div class="image-wrapper 3u">
-                    <input id="jay-z" type="image"  class="image-button selected2" name="jay-z" src="{{ url_for('static', filename='images/jay-z.jpg') }}" />
-                </div>
-                <div class="image-wrapper 3u">
-                    <input id="gambino" type="image"  class="image-button" name="gambino" src="{{ url_for('static', filename='images/gambino.jpg') }}" />
-                </div>
-            </div>
-            <div class="row 12u">
-            	<div class="image-wrapper 3u">
-                    <input id="poe" type="image"  class="image-button" name="poe" src="{{ url_for('static', filename='images/poe.jpg') }}" />
-                </div>
-                <div class="image-wrapper 3u">
-                    <input id="shakespeare" type="image"  class="image-button" name="shakespeare" src="{{ url_for('static', filename='images/shakespeare.jpg') }}" />
-                </div>
-				<div class="image-wrapper 3u">
-                    <input id="beyonce" type="image" class="image-button" name="beyonce" src="{{ url_for('static', filename='images/beyonce.jpg') }}" />
-                </div>
-                <div class="image-wrapper 3u">
-                    <input id="2chainz" type="image"  class="image-button" name="2chainz" src="{{ url_for('static', filename='images/2-chainz.jpg') }}" />
-                </div>
-            </div>
-        </div>
-	</body>
+		<h2 id="select-prompt">Select Two</h2>
+		<div class="row 12u">
+			<div class="image-wrapper 3u">
+				<input id="seuss" type="image" class="image-button selected1" name="suess" src="{{ url_for('static', filename='images/seuss.jpg') }}" />
+			</div>
+			<div class="image-wrapper 3u">
+				<input id="ernest" type="image"  class="image-button" name="ernest" src="{{ url_for('static', filename='images/ernest.jpg') }}" />
+			</div>
+			<div class="image-wrapper 3u">
+				<input id="jay-z" type="image"  class="image-button selected2" name="jay-z" src="{{ url_for('static', filename='images/jay-z.jpg') }}" />
+			</div>
+			<div class="image-wrapper 3u">
+				<input id="gambino" type="image"  class="image-button" name="gambino" src="{{ url_for('static', filename='images/gambino.jpg') }}" />
+			</div>
+		</div>
+		<div class="row 12u">
+			<div class="image-wrapper 3u">
+				<input id="poe" type="image"  class="image-button" name="poe" src="{{ url_for('static', filename='images/poe.jpg') }}" />
+			</div>
+			<div class="image-wrapper 3u">
+				<input id="shakespeare" type="image"  class="image-button" name="shakespeare" src="{{ url_for('static', filename='images/shakespeare.jpg') }}" />
+			</div>
+			<div class="image-wrapper 3u">
+				<input id="beyonce" type="image" class="image-button" name="beyonce" src="{{ url_for('static', filename='images/beyonce.jpg') }}" />
+			</div>
+			<div class="image-wrapper 3u">
+				<input id="2chainz" type="image"  class="image-button" name="2chainz" src="{{ url_for('static', filename='images/2-chainz.jpg') }}" />
+			</div>
+		</div>
+	</div>
+</body>
 </html>
